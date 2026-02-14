@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!-- MOBILE OPTIMIZATION -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- ADVANCED MOBILE OPTIMIZATION -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <title>PuroAir HEPA Air Purifier Review | 99.9% Cleaner Air</title>
 
 <style>
@@ -24,104 +26,129 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     background: var(--bg-light);
     color: var(--text-main);
-    line-height: 1.8;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden; /* Prevents side-scrolling on mobile */
 }
 
-/* ===== HEADER ===== */
+/* TOP PROMOTIONAL IMAGE (Landscape, smaller, centered) */
+.top-banner {
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+.top-banner img {
+    width: 100%;
+    max-width: 600px; /* Kept smaller and centered as requested */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* ===== HEADER (Full Width) ===== */
 .header {
     width: 100%;
     background: var(--puro-dark);
     color: #fff;
     text-align: center;
-    padding: 40px 15px;
+    padding: 50px 20px;
 }
 
 .header h1 {
-    font-size: clamp(26px, 5vw, 42px);
+    font-size: clamp(28px, 6vw, 48px);
     font-weight: 800;
     letter-spacing: -0.5px;
+    color: #ffffff;
 }
 
 .header p {
     color: var(--puro-gold);
-    font-size: 18px;
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 600;
     margin-top: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-/* ===== CONTAINER ===== */
+/* ===== FULL WIDE CONTAINER ===== */
 .container {
-    max-width: 900px;
+    width: 98%; /* Utilizes full wide space */
+    max-width: 1600px; /* generous max width for ultra-wide monitors */
     margin: auto;
-    padding: 40px 20px;
+    padding: 40px 10px;
 }
 
 /* ===== PRODUCT SECTIONS ===== */
 .product-block {
     background: white;
-    padding: 30px;
+    padding: 40px 25px;
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin-bottom: 50px;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+    margin-bottom: 60px;
+    width: 100%;
 }
 
 /* CENTERED HEADINGS */
 h2 {
-    font-size: clamp(22px, 4vw, 32px);
+    font-size: clamp(24px, 4vw, 36px);
     color: var(--puro-blue);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-align: center;
     font-weight: 800;
 }
 
 p {
-    font-size: 17px;
+    font-size: clamp(16px, 1.8vw, 18px);
     margin-bottom: 20px;
-    color: #444;
+    color: #333;
 }
 
-/* ===== IMAGE GALLERIES (4 images per product) ===== */
+/* ===== IMAGE GALLERIES (No Cropping) ===== */
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-    margin: 25px 0;
+    gap: 20px;
+    margin: 30px 0;
 }
 
 .gallery img {
     width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
+    height: auto; /* Important: Prevents cropping */
+    display: block;
+    border-radius: 15px;
     transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .gallery img:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
 }
 
-/* MOBILE GALLERY (2x2) */
-@media(max-width:768px){
-    .gallery { grid-template-columns: repeat(2, 1fr); }
-    .gallery img { height: 140px; }
-    .product-block { padding: 20px; }
+/* RESPONSIVE TABLET/MOBILE GALLERIES */
+@media(max-width:1024px){
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+}
+
+@media(max-width:480px){
+    .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .product-block { padding: 25px 15px; }
 }
 
 /* ===== PRICE & CTA ===== */
 .price-tag {
     background: #eef6ff;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 6px solid var(--puro-blue);
-    margin: 20px 0;
-    font-size: 18px;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 8px solid var(--puro-blue);
+    margin: 25px 0;
+    font-size: 20px;
 }
 
 .price-tag b {
-    font-size: 24px;
+    font-size: 28px;
     color: #27ae60;
 }
 
@@ -129,41 +156,43 @@ p {
     display: inline-block;
     background: var(--puro-orange);
     color: #fff;
-    padding: 16px 35px;
+    padding: 18px 45px;
     text-decoration: none;
-    border-radius: 50px;
+    border-radius: 60px;
     font-weight: 800;
-    font-size: 18px;
-    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.3);
+    font-size: clamp(16px, 2vw, 20px);
+    box-shadow: 0 6px 15px rgba(255, 106, 0, 0.3);
     transition: all 0.3s;
 }
 
 .btn:hover {
     background: #e85d00;
-    transform: translateY(-2px);
+    transform: scale(1.03);
 }
 
 @media(max-width:768px){
-    .btn { display: block; text-align: center; }
+    .btn { display: block; text-align: center; width: 100%; }
 }
 
-/* ===== STICKY FOOTER CTA ===== */
+/* ===== STICKY FOOTER CTA (Mobile Optimized) ===== */
 .sticky-bar {
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     background: var(--puro-orange);
-    padding: 15px;
+    padding: clamp(12px, 3vh, 18px);
     text-align: center;
     z-index: 9999;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 -3px 15px rgba(0,0,0,0.15);
 }
 
 .sticky-bar a {
     color: #fff;
     text-decoration: none;
     font-weight: 800;
-    font-size: 18px;
+    font-size: clamp(14px, 4vw, 18px);
+    display: block;
 }
 
 /* ===== FOOTER & DISCLAIMER ===== */
@@ -171,16 +200,24 @@ footer {
     background: var(--puro-dark);
     color: #fff;
     text-align: center;
-    padding: 60px 20px 100px;
-    font-size: 15px;
+    padding: 80px 20px 120px; /* Extra padding for sticky bar */
+    font-size: 16px;
+}
+
+footer p {
+    color: #ffffff !important;
+    margin-bottom: 10px;
 }
 
 .disclaimer-text {
-    max-width: 800px;
-    margin: 20px auto 0;
+    max-width: 1100px;
+    margin: 30px auto 0;
     font-size: 14px;
-    opacity: 0.8;
-    line-height: 1.5;
+    opacity: 0.7;
+    line-height: 1.6;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
 }
 
 </style>
@@ -188,10 +225,15 @@ footer {
 
 <body>
 
-<!-- HEADER -->
+<!-- TOP BANNER IMAGE (Resized landscape, centered) -->
+<div class="top-banner">
+    <img src="image/36.png" alt="PuroAir Exclusive Offer">
+</div>
+
+<!-- HEADER (Full Wide) -->
 <div class="header">
     <h1>PuroAir HEPA Air Purifier Review</h1>
-    <p>Medical Grade Protection For Your Home</p>
+    <p>Premium Medical Grade Protection For Your Home</p>
 </div>
 
 <div class="container">
@@ -201,10 +243,10 @@ footer {
         <h2>PuroAir 130i – Bedroom Air Protection</h2>
         
         <div class="gallery">
-            <img src="image/1.png" alt="130i Hero">
-            <img src="image/7.jpg" alt="130i WiFi">
-            <img src="image/10.jpg" alt="130i App">
-            <img src="image/12.jpg" alt="130i Features">
+            <img src="image/1.png" alt="130i View 1">
+            <img src="image/7.jpg" alt="130i View 2">
+            <img src="image/10.jpg" alt="130i View 3">
+            <img src="image/12.jpg" alt="130i View 4">
         </div>
 
         <p>
@@ -212,7 +254,7 @@ footer {
         </p>
 
         <div class="price-tag">
-            Recent Amazon Price: <b>$89.99</b><br>
+            Current Amazon Price: <b>$89.99</b><br>
             👉 <a href="https://amzn.to/3Mwvlvo" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Check Latest Deal Here</a>
         </div>
         <a class="btn" href="https://amzn.to/3Mwvlvo" target="_blank">View On Amazon</a>
@@ -223,10 +265,10 @@ footer {
         <h2>PuroAir 130i (2 Pack) – Multi-Room Solution</h2>
         
         <div class="gallery">
-            <img src="image/2.jpg" alt="130i Setup">
-            <img src="image/13.jpg" alt="Child Sleeping">
-            <img src="image/14.jpg" alt="500k Families">
-            <img src="image/29.jpg" alt="Model Lineup">
+            <img src="image/2.jpg" alt="130i 2-Pack 1">
+            <img src="image/13.jpg" alt="130i 2-Pack 2">
+            <img src="image/14.jpg" alt="130i 2-Pack 3">
+            <img src="image/29.jpg" alt="130i 2-Pack 4">
         </div>
 
         <p>
@@ -245,10 +287,10 @@ footer {
         <h2>PuroAir 240 – Large Room Purifier</h2>
         
         <div class="gallery">
-            <img src="image/18.jpg" alt="240 Living Room">
-            <img src="image/19.jpg" alt="240 Interface">
-            <img src="image/21.jpg" alt="240 Efficiency">
-            <img src="image/23.jpg" alt="240 Design">
+            <img src="image/18.jpg" alt="240 View 1">
+            <img src="image/19.jpg" alt="240 View 2">
+            <img src="image/21.jpg" alt="240 View 3">
+            <img src="image/23.jpg" alt="240 View 4">
         </div>
 
         <p>
@@ -256,7 +298,7 @@ footer {
         </p>
 
         <div class="price-tag">
-            Sale Price: <b>$159.00</b><br>
+            Current Sale Price: <b>$159.00</b><br>
             👉 <a href="https://amzn.to/4rd4KCK" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Check Live Discount</a>
         </div>
         <a class="btn" href="https://amzn.to/4rd4KCK" target="_blank">Buy PuroAir 240</a>
@@ -267,10 +309,10 @@ footer {
         <h2>PuroAir 240 (2 Pack) – Whole Home Power</h2>
         
         <div class="gallery">
-            <img src="image/3.jpg" alt="240 Seal">
-            <img src="image/15.jpg" alt="240 2-Pack">
-            <img src="image/16.jpg" alt="Filter Core">
-            <img src="image/20.jpg" alt="Kid and Dog">
+            <img src="image/3.jpg" alt="240 2pk 1">
+            <img src="image/15.jpg" alt="240 2pk 2">
+            <img src="image/16.jpg" alt="240 2pk 3">
+            <img src="image/20.jpg" alt="240 2pk 4">
         </div>
 
         <p>
@@ -285,14 +327,14 @@ footer {
     </div>
 
     <!-- PRODUCT 5: 400 -->
-    <div class="product-block">
+    <div class="product-block" style="margin-bottom: 100px;">
         <h2>PuroAir 400 – Commercial Grade Protection</h2>
         
         <div class="gallery">
-            <img src="image/24.jpg" alt="400 Massive Coverage">
-            <img src="image/25.jpg" alt="400 Office Use">
-            <img src="image/26.jpg" alt="400 Power Button">
-            <img src="image/32.jpg" alt="400 Tech Vents">
+            <img src="image/24.jpg" alt="400 View 1">
+            <img src="image/25.jpg" alt="400 View 2">
+            <img src="image/26.jpg" alt="400 View 3">
+            <img src="image/32.jpg" alt="400 View 4">
         </div>
 
         <p>
@@ -300,7 +342,7 @@ footer {
         </p>
 
         <div class="price-tag">
-            Flagship Price: <b>$259.99</b><br>
+            Flagship Sale Price: <b>$259.99</b><br>
             👉 <a href="https://amzn.to/4agjSJO" target="_blank" style="color: var(--puro-blue); font-weight: 700;">View Best Price on Amazon</a>
         </div>
         <a class="btn" href="https://amzn.to/4agjSJO" target="_blank">Get The Flagship 400</a>
@@ -308,7 +350,7 @@ footer {
 
 </div>
 
-<!-- STICKY FOOTER FOR MOBILE -->
+<!-- STICKY FOOTER FOR MOBILE (iPhone & Android Compatible) -->
 <div class="sticky-bar">
     <a href="https://amzn.to/3Mwvlvo" target="_blank">🔥 TAP TO VIEW TODAY'S BEST AMAZON DEALS</a>
 </div>
@@ -317,8 +359,8 @@ footer {
 <footer>
     <p><b>© 2026 PuroAir Product Review | ClickerHubb</b></p>
     <div class="disclaimer-text">
-        <p><b>Disclaimer & Disclosure:</b> Statements regarding health benefits have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Always consult a physician for respiratory issues.</p>
-        <p style="margin-top: 10px;">As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you and helps support our work. Thank you for your support!</p>
+        <p>As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you and helps support our work. Thank you for your support!</p>
+        <p style="margin-top: 15px;"><b>Disclaimer & Disclosure:</b> Statements regarding health benefits have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Always consult a physician for respiratory issues.</p>
     </div>
 </footer>
 
