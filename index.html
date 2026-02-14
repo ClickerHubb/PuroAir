@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <!-- ADVANCED MOBILE OPTIMIZATION -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="mobile-web-app-capable" content="yes">
 <title>PuroAir HEPA Air Purifier Review | 99.9% Cleaner Air</title>
 
 <style>
@@ -28,7 +26,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden; /* Prevents side-scrolling on mobile */
+    overflow-x: hidden;
 }
 
 /* TOP PROMOTIONAL IMAGE (Landscape, smaller, centered) */
@@ -41,14 +39,14 @@ body {
 
 .top-banner img {
     width: 100%;
-    max-width: 600px; /* Kept smaller and centered as requested */
+    max-width: 600px; 
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
 }
 
-/* ===== HEADER (Full Width) ===== */
+/* ===== HEADER (Full Width - Stylish Version) ===== */
 .header {
     width: 100%;
     background: var(--puro-dark);
@@ -60,7 +58,6 @@ body {
 .header h1 {
     font-size: clamp(28px, 6vw, 48px);
     font-weight: 800;
-    letter-spacing: -0.5px;
     color: #ffffff;
 }
 
@@ -70,13 +67,12 @@ body {
     font-weight: 600;
     margin-top: 10px;
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* ===== FULL WIDE CONTAINER ===== */
 .container {
-    width: 98%; /* Utilizes full wide space */
-    max-width: 1600px; /* generous max width for ultra-wide monitors */
+    width: 98%;
+    max-width: 1600px;
     margin: auto;
     padding: 40px 10px;
 }
@@ -106,7 +102,7 @@ p {
     color: #333;
 }
 
-/* ===== IMAGE GALLERIES (No Cropping) ===== */
+/* ===== IMAGE GALLERIES (Full coverage, no cropping) ===== */
 .gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -116,40 +112,36 @@ p {
 
 .gallery img {
     width: 100%;
-    height: auto; /* Important: Prevents cropping */
+    height: auto; /* Corrects cropping */
     display: block;
     border-radius: 15px;
-    transition: transform 0.3s;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.gallery img:hover {
-    transform: translateY(-5px);
-}
-
-/* RESPONSIVE TABLET/MOBILE GALLERIES */
+/* MOBILE GALLERIES */
 @media(max-width:1024px){
-    .gallery { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media(max-width:480px){
-    .gallery { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .product-block { padding: 25px 15px; }
-}
-
-/* ===== PRICE & CTA ===== */
+/* ===== PRICE & CTA (Now centered in the middle) ===== */
 .price-tag {
     background: #eef6ff;
     padding: 25px;
     border-radius: 15px;
-    border-left: 8px solid var(--puro-blue);
-    margin: 25px 0;
+    border-top: 4px solid var(--puro-blue);
+    margin: 25px auto; /* Centered */
     font-size: 20px;
+    text-align: center; /* Centered text */
+    max-width: 600px;
 }
 
 .price-tag b {
     font-size: 28px;
     color: #27ae60;
+}
+
+.cta-wrapper {
+    text-align: center; /* Centers the button wrap */
+    margin-top: 15px;
 }
 
 .btn {
@@ -160,64 +152,50 @@ p {
     text-decoration: none;
     border-radius: 60px;
     font-weight: 800;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 18px;
     box-shadow: 0 6px 15px rgba(255, 106, 0, 0.3);
-    transition: all 0.3s;
-}
-
-.btn:hover {
-    background: #e85d00;
-    transform: scale(1.03);
 }
 
 @media(max-width:768px){
-    .btn { display: block; text-align: center; width: 100%; }
+    .btn { display: block; width: 100%; }
 }
 
-/* ===== STICKY FOOTER CTA (Mobile Optimized) ===== */
+/* ===== STICKY CTA ===== */
 .sticky-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     background: var(--puro-orange);
-    padding: clamp(12px, 3vh, 18px);
+    padding: 15px;
     text-align: center;
     z-index: 9999;
-    box-shadow: 0 -3px 15px rgba(0,0,0,0.15);
 }
 
 .sticky-bar a {
     color: #fff;
     text-decoration: none;
     font-weight: 800;
-    font-size: clamp(14px, 4vw, 18px);
-    display: block;
 }
 
-/* ===== FOOTER & DISCLAIMER ===== */
+/* ===== FOOTER (Stylish Version) ===== */
 footer {
     background: var(--puro-dark);
     color: #fff;
     text-align: center;
-    padding: 80px 20px 120px; /* Extra padding for sticky bar */
-    font-size: 16px;
+    padding: 80px 20px 120px;
 }
 
 footer p {
     color: #ffffff !important;
-    margin-bottom: 10px;
 }
 
 .disclaimer-text {
     max-width: 1100px;
     margin: 30px auto 0;
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.8;
     line-height: 1.6;
-    text-align: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 30px;
 }
 
 </style>
@@ -225,12 +203,11 @@ footer p {
 
 <body>
 
-<!-- TOP BANNER IMAGE (Resized landscape, centered) -->
+<!-- TOP BANNER -->
 <div class="top-banner">
-    <img src="image/36.png" alt="PuroAir Exclusive Offer">
+    <img src="image/36.png" alt="PuroAir Deal">
 </div>
 
-<!-- HEADER (Full Wide) -->
 <div class="header">
     <h1>PuroAir HEPA Air Purifier Review</h1>
     <p>Premium Medical Grade Protection For Your Home</p>
@@ -238,129 +215,117 @@ footer p {
 
 <div class="container">
 
-    <!-- PRODUCT 1: 130i -->
+    <!-- PRODUCT 1 -->
     <div class="product-block">
         <h2>PuroAir 130i – Bedroom Air Protection</h2>
-        
         <div class="gallery">
-            <img src="image/1.png" alt="130i View 1">
-            <img src="image/7.jpg" alt="130i View 2">
-            <img src="image/10.jpg" alt="130i View 3">
-            <img src="image/12.jpg" alt="130i View 4">
+            <img src="image/1.png">
+            <img src="image/7.jpg">
+            <img src="image/10.jpg">
+            <img src="image/12.jpg">
         </div>
-
-        <p>
-            The <b>PuroAir 130i</b> is the ultimate specialty cleaner for small to medium spaces. Its standout feature is its <b>H13 True HEPA filtration</b>, which is 500x stronger than standard filters. Designed for bedrooms and nurseries, it covers up to 600 sq ft and operates at a whisper-quiet decibel level. The benefit is immediate: it removes 99.9% of pet dander, pollen, and dust, allowing for a deeper, allergy-free sleep. Its smart WiFi integration lets you automate your home’s health from any smartphone.
-        </p>
-
+        <p>The PuroAir 130i is the ultimate specialty cleaner for small to medium spaces. It integrates a medical-grade H13 True HEPA filtration system that is 500x stronger than standard filters. Ideal for bedrooms, it removes 99.9% of pollutants while operating at a whisper-quiet level.</p>
+        
         <div class="price-tag">
             Current Amazon Price: <b>$89.99</b><br>
-            👉 <a href="https://amzn.to/3Mwvlvo" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Check Latest Deal Here</a>
+            <a href="https://amzn.to/3Mwvlvo" target="_blank" style="color: var(--puro-blue); text-decoration: none; font-weight: 700;">👉 Check Latest Deal Here</a>
         </div>
-        <a class="btn" href="https://amzn.to/3Mwvlvo" target="_blank">View On Amazon</a>
+        <div class="cta-wrapper">
+            <a class="btn" href="https://amzn.to/3Mwvlvo" target="_blank">View On Amazon</a>
+        </div>
     </div>
 
-    <!-- PRODUCT 2: 130i 2-PACK -->
+    <!-- PRODUCT 2 -->
     <div class="product-block">
         <h2>PuroAir 130i (2 Pack) – Multi-Room Solution</h2>
-        
         <div class="gallery">
-            <img src="image/2.jpg" alt="130i 2-Pack 1">
-            <img src="image/13.jpg" alt="130i 2-Pack 2">
-            <img src="image/14.jpg" alt="130i 2-Pack 3">
-            <img src="image/29.jpg" alt="130i 2-Pack 4">
+            <img src="image/2.jpg">
+            <img src="image/13.jpg">
+            <img src="image/14.jpg">
+            <img src="image/29.jpg">
         </div>
-
-        <p>
-            The <b>130i 2-Pack bundle</b> is the most cost-effective solution for multi-room protection. By placing one in the master bedroom and one in the nursery, you ensure an unbroken chain of clean air. This package offers a massive benefit for families with heavy-shedding pets, as it doubles the filtration volume without doubling the cost. Each unit retains the smart sensor technology, automatically ramping up if it detects cooking smoke or seasonal allergens.
-        </p>
-
+        <p>The 130i 2-Pack bundle is designed for households needing purification in multiple rooms. Each unit captures microscopic contaminants, ensuring balanced airflow and freshness throughout your home while offering better cost savings.</p>
+        
         <div class="price-tag">
             Bundle Value Price: <b>$189.99</b><br>
-            👉 <a href="https://amzn.to/4arzmsZ" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Get the 2-Pack Bundle Discount</a>
+            <a href="https://amzn.to/4arzmsZ" target="_blank" style="color: var(--puro-blue); text-decoration: none; font-weight: 700;">👉 Get the 2-Pack Bundle Discount</a>
         </div>
-        <a class="btn" href="https://amzn.to/4arzmsZ" target="_blank">View Bundle Deal</a>
+        <div class="cta-wrapper">
+            <a class="btn" href="https://amzn.to/4arzmsZ" target="_blank">View Bundle Deal</a>
+        </div>
     </div>
 
-    <!-- PRODUCT 3: 240 -->
+    <!-- PRODUCT 3 -->
     <div class="product-block">
         <h2>PuroAir 240 – Large Room Purifier</h2>
-        
         <div class="gallery">
-            <img src="image/18.jpg" alt="240 View 1">
-            <img src="image/19.jpg" alt="240 View 2">
-            <img src="image/21.jpg" alt="240 View 3">
-            <img src="image/23.jpg" alt="240 View 4">
+            <img src="image/18.jpg">
+            <img src="image/19.jpg">
+            <img src="image/21.jpg">
+            <img src="image/23.jpg">
         </div>
-
-        <p>
-            The <b>PuroAir 240</b> is the "Living Room Workhorse." Built for spaces up to 1,000 sq ft, it features a sleek rectangular design that integrates <b>CarbonTech™</b> layers to neutralize tough kitchen smells and VOC gases. Its speciality is high-volume air turnover; it can scrub the air in a large open kitchen in minutes. The built-in air quality indicator light gives you instant visual confirmation (Green/Yellow/Red) of your home's safety.
-        </p>
-
+        <p>The PuroAir 240 covers up to 1,000 sq ft. It features a sleek design and CarbonTech™ layers to neutralize tough kitchen smells and VOC gases. Smart sensors automatically adjust speed based on real-time air quality.</p>
+        
         <div class="price-tag">
             Current Sale Price: <b>$159.00</b><br>
-            👉 <a href="https://amzn.to/4rd4KCK" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Check Live Discount</a>
+            <a href="https://amzn.to/4rd4KCK" target="_blank" style="color: var(--puro-blue); text-decoration: none; font-weight: 700;">👉 Check Live Discount</a>
         </div>
-        <a class="btn" href="https://amzn.to/4rd4KCK" target="_blank">Buy PuroAir 240</a>
+        <div class="cta-wrapper">
+            <a class="btn" href="https://amzn.to/4rd4KCK" target="_blank">Buy PuroAir 240</a>
+        </div>
     </div>
 
-    <!-- PRODUCT 4: 240 2-PACK -->
+    <!-- PRODUCT 4 -->
     <div class="product-block">
         <h2>PuroAir 240 (2 Pack) – Whole Home Power</h2>
-        
         <div class="gallery">
-            <img src="image/3.jpg" alt="240 2pk 1">
-            <img src="image/15.jpg" alt="240 2pk 2">
-            <img src="image/16.jpg" alt="240 2pk 3">
-            <img src="image/20.jpg" alt="240 2pk 4">
+            <img src="image/3.jpg">
+            <img src="image/15.jpg">
+            <img src="image/16.jpg">
+            <img src="image/20.jpg">
         </div>
-
-        <p>
-            For homeowners with large multi-story layouts, the <b>240 2-Pack</b> is the professional’s choice. This configuration provides medical-grade air for up to 2,000 sq ft when combined. It is particularly beneficial for pet owners who deal with airborne hair and deep odors. These units use high-efficiency motors that remain energy-star compliant, ensuring your air stays pure without a spike in your utility bill.
-        </p>
-
+        <p>The 240 2-Pack configuration provides medical-grade air for up to 2,000 sq ft when combined. These units use high-efficiency motors that remain Energy Star compliant, perfect for large family homes.</p>
+        
         <div class="price-tag">
             Professional Bundle Price: <b>$279.00</b><br>
-            👉 <a href="https://amzn.to/4r6NwqG" target="_blank" style="color: var(--puro-blue); font-weight: 700;">Claim Bundle Savings</a>
+            <a href="https://amzn.to/4r6NwqG" target="_blank" style="color: var(--puro-blue); text-decoration: none; font-weight: 700;">👉 Claim Bundle Savings</a>
         </div>
-        <a class="btn" href="https://amzn.to/4r6NwqG" target="_blank">View Whole Home Deal</a>
+        <div class="cta-wrapper">
+            <a class="btn" href="https://amzn.to/4r6NwqG" target="_blank">View Whole Home Deal</a>
+        </div>
     </div>
 
-    <!-- PRODUCT 5: 400 -->
+    <!-- PRODUCT 5 -->
     <div class="product-block" style="margin-bottom: 100px;">
         <h2>PuroAir 400 – Commercial Grade Protection</h2>
-        
         <div class="gallery">
-            <img src="image/24.jpg" alt="400 View 1">
-            <img src="image/25.jpg" alt="400 View 2">
-            <img src="image/26.jpg" alt="400 View 3">
-            <img src="image/32.jpg" alt="400 View 4">
+            <img src="image/24.jpg">
+            <img src="image/25.jpg">
+            <img src="image/26.jpg">
+            <img src="image/32.jpg">
         </div>
-
-        <p>
-            The <b>PuroAir 400</b> is the flagship flagship beast. Covering a staggering <b>2,000 sq ft</b>, it is designed for the largest open-concept homes, offices, and even clinics. Its speciality is rapid particle removal; it moves more air than any other unit in the lineup while staying remarkably quiet. Backed by the American Lung Association partnership, the 400 is the ultimate investment for long-term respiratory health and a dust-free home.
-        </p>
-
+        <p>The flagship PuroAir 400 covers a massive 2,000 sq ft. Designed for rapid particle removal in large open-concept homes or offices. Hospital-grade power that stays remarkably quiet.</p>
+        
         <div class="price-tag">
             Flagship Sale Price: <b>$259.99</b><br>
-            👉 <a href="https://amzn.to/4agjSJO" target="_blank" style="color: var(--puro-blue); font-weight: 700;">View Best Price on Amazon</a>
+            <a href="https://amzn.to/4agjSJO" target="_blank" style="color: var(--puro-blue); text-decoration: none; font-weight: 700;">👉 View Best Price on Amazon</a>
         </div>
-        <a class="btn" href="https://amzn.to/4agjSJO" target="_blank">Get The Flagship 400</a>
+        <div class="cta-wrapper">
+            <a class="btn" href="https://amzn.to/4agjSJO" target="_blank">Get The Flagship 400</a>
+        </div>
     </div>
 
 </div>
 
-<!-- STICKY FOOTER FOR MOBILE (iPhone & Android Compatible) -->
 <div class="sticky-bar">
     <a href="https://amzn.to/3Mwvlvo" target="_blank">🔥 TAP TO VIEW TODAY'S BEST AMAZON DEALS</a>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <p><b>© 2026 PuroAir Product Review | ClickerHubb</b></p>
     <div class="disclaimer-text">
         <p>As an Amazon Associate, I earn from qualifying purchases. This comes at no extra cost to you and helps support our work. Thank you for your support!</p>
-        <p style="margin-top: 15px;"><b>Disclaimer & Disclosure:</b> Statements regarding health benefits have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Always consult a physician for respiratory issues.</p>
+        <p style="margin-top: 10px;"><b>Disclaimer & Disclosure:</b> Statements regarding health benefits have not been evaluated by the FDA and are not intended to diagnose, treat, cure, or prevent any disease. Always consult a physician for respiratory issues.</p>
     </div>
 </footer>
 
